@@ -2,9 +2,9 @@ import React from 'react';
 import {StyledButton} from '../styles/StyledHome'
 
 export default function Form (props){
-    const {value, onInputChange} = props;
+    const {value, onInputChange, onSubmit} = props;
     return(
-        <div>
+        <form onSubmit={onSubmit}>
             <label htmlFor='regionInput'>
                 Region: &nbsp;
                 <select id='regionInput' name='region' value={value.region} onChange={onInputChange}>
@@ -19,6 +19,6 @@ export default function Form (props){
                 </select>
             </label>
             <StyledButton>Submit</StyledButton>
-        </div>
+        </form>
     )
 }

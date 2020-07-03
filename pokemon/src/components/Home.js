@@ -42,11 +42,19 @@ export default function Home(){
         
     }
 
+    const onSubmit = event =>{
+        event.preventDefault()
+        const {name, value} = event.target;
+        console.log(name);
+        console.log(value);
+    }
+
     return(
         <StyledHome>
             <Form  
                 value={form} 
                 onInputChange={onInputChange}
+                onSubmit = {onSubmit}
             />
         </StyledHome>
     )
