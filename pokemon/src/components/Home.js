@@ -44,9 +44,7 @@ export default function Home(){
 
     const onSubmit = event =>{
         event.preventDefault()
-        const {name, value} = event.target;
-        console.log(name);
-        console.log(value);
+        console.log(form.region);
     }
 
     return(
